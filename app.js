@@ -29,6 +29,9 @@ submitButton.addEventListener('click', () => {
           });
         }
       }
+    
+    
+    
 
       // Group dividends by year
       const dividendsByYear = {};
@@ -93,9 +96,27 @@ table.innerHTML = `
     </tbody>
   `;
 
-      // Display the table in the results div
-      resultsDiv.innerHTML = '';
-      resultsDiv.appendChild(table);
+    
+      // Get the company name
+      const companyInfoUrl = `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${ticker}&apikey=${apiKey}`;
+      fetch(companyInfoUrl)
+        .then(infoResponse => infoResponse.json())
+        .then(infoData => {
+          const companyName = infoData.bestMatches && infoData.bestMatches.length > 0 ? infoData.bestMatches[0]['2. name'] : 'Company name not found';
+
+          // Create a span with the company name
+          const companyNameSpan = document.createElement('span');
+          companyNameSpan.textContent = `${companyName}`;
+
+          // Display the company name above the table
+          resultsDiv.innerHTML = '';
+          resultsDiv.appendChild(companyNameSpan);
+          resultsDiv.appendChild(table);
+        })
+        .catch(error => {
+          console.error(error);
+          resultsDiv.textContent = 'An error occurred while retrieving the company information';
+        });
     })
     .catch(error => {
       console.error(error);
