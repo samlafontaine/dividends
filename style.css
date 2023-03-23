@@ -1,17 +1,17 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 .title {
   font-weight: 400;
   margin-bottom: 1rem;
-}
-
-label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
 }
 
 input[type="text"] {
@@ -20,6 +20,7 @@ input[type="text"] {
   font-size: 1rem;
   border: 1px solid #d8d8d8;
   border-radius: 4px;
+  max-width: 400px;
 }
 
 #company-name {
@@ -29,7 +30,7 @@ input[type="text"] {
 }
 
 table {
-  width: 100%;
+  width: 60%;
   border-collapse: collapse;
 }
 
@@ -53,14 +54,29 @@ tbody tr:hover {
   background-color: #f1f1f1;
 }
 
-.input-group {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
 .companyName {
   font-size: 20px;
   margin-bottom: 10px;
+}
+
+#results, .title {
+  text-align: center;
+  max-width: 100%;
+  overflow-x: auto;
+    }
+
+table {
+  border-collapse: collapse;
+  margin: 20px auto;
+    }
+
+.is-flex {
+  display: flex;
+  justify-content: center;
+  align-items: middle;
+  flex-wrap: wrap;
+}
+
+.neg-number {
+  color: red;
 }
