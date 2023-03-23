@@ -157,9 +157,9 @@ submitButton.addEventListener("click", () => {
           companyNameSpan.className = "companyName";
 
           // Create a string with the average variations for the previous 3, 5, and 10 years
-          const averageGrowthRatesString = `Average growth rate previous 3 years: ${averageGrowthRates["3 years"]}, 
-Average growth rate previous 5 years: ${averageGrowthRates["5 years"]}, 
-Average growth rate previous 10 years: ${averageGrowthRates["10 years"]}`;
+          const averageGrowthRatesString = `Average annual growth rate previous 3 years: ${averageGrowthRates["3 years"]}, 
+                                            Average annual growth rate previous 5 years: ${averageGrowthRates["5 years"]}, 
+                                            Average annual growth rate previous 10 years: ${averageGrowthRates["10 years"]}`;
 
           // Create a span with the average variations
           const averageGrowthRatesSpan = document.createElement("span");
