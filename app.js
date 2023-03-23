@@ -129,11 +129,18 @@ submitButton.addEventListener("click", () => {
             })
             .join("")}
           <td>${yearlyTotals[year].toFixed(4)}</td>
-          <td>${
+          <td class="${
+            yearlyVariations[year] && yearlyVariations[year] < 0
+              ? "neg-number"
+              : ""
+          }">${
             yearlyVariations[year]
               ? yearlyVariations[year].toFixed(2) + "%"
               : "-"
           }</td>
+          
+          
+   
         </tr>
       `
         )
