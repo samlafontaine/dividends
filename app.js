@@ -134,13 +134,10 @@ submitButton.addEventListener("click", () => {
               ? "neg-number"
               : ""
           }">${
-            yearlyVariations[year]
+            year !== years[0] && yearlyVariations[year]
               ? yearlyVariations[year].toFixed(2) + "%"
               : "-"
-          }</td>
-          
-          
-   
+          }</td>   
         </tr>
       `
         )
@@ -164,9 +161,9 @@ submitButton.addEventListener("click", () => {
           companyNameSpan.className = "companyName";
 
           // Create a string with the average variations for the previous 3, 5, and 10 years
-          const averageGrowthRatesString = `Average annual growth rate previous 3 years: ${averageGrowthRates["3 years"]}, 
-                                            Average annual growth rate previous 5 years: ${averageGrowthRates["5 years"]}, 
-                                            Average annual growth rate previous 10 years: ${averageGrowthRates["10 years"]}`;
+          const averageGrowthRatesString = `Average annual growth rates: previous 3 years: ${averageGrowthRates["3 years"]}, 
+                                            previous 5 years: ${averageGrowthRates["5 years"]}, 
+                                            previous 10 years: ${averageGrowthRates["10 years"]}`;
 
           // Create a span with the average variations
           const averageGrowthRatesSpan = document.createElement("span");
