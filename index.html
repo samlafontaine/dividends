@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="/style.css">
-    <title>Stock Dividend History</title>
-  </head>
-  <body>
-    <div class="container" style="width:850px; margin:0 auto;"> 
-      <h1 class="title is-3 mt-6">Get historical dividend data</h1>
-      
-      <label for="ticker"></label>
-      <div class="is-flex">
-      <input type="text" id="ticker" class= "input mr-4" placeholder="Enter a stock ticker">
+
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="/style.css">
+  <title>Stock Dividend History</title>
+</head>
+
+<body>
+  <div class="container" style="width:850px; margin:0 auto;">
+    <h1 class="title is-3 mt-6">Get historical dividend data</h1>
+
+    <label for="ticker"></label>
+    <div class="is-flex">
+      <input type="text" id="ticker" class="input mr-4" placeholder="Enter a stock ticker">
       <button class="button" id="submit">Get dividend history</button>
-      </div>
-      <br>
-      <table id="results" class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth mt-4"></table>
-      <script src="app.js"></script>
     </div>
-  </body>
+    <br>
+    <table id="results" class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth mt-4"></table>
+    <script src="app.js"></script>
+  </div>
+</body>
+
 </html>
