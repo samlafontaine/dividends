@@ -66,12 +66,14 @@ table {
   margin: 20px auto;
 }
 
+.neg-number {
+  color: red;
+}
+
+
 .is-flex {
   display: flex;
   justify-content: center;
+  align-items: middle;
   flex-wrap: wrap;
-}
-
-.neg-number {
-  color: red;
 }
