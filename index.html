@@ -22,12 +22,14 @@
 <body>
   <div class="container">
     <h1 class="title is-3 mt-6">Get historical dividend data 📈</h1>
-
     <label for="ticker"></label>
     <div class="is-flex">
       <input type="text" id="ticker" class="input mr-4" placeholder="Enter a stock ticker">
       <div id="suggestions"></div>      
       <button class="button" id="submit">Get dividend history</button>
+    </div>
+    <div class="content is-small">
+      <p class="madeby">Made by <a href="https://twitter.com/samlafontaine_">Sam Lafontaine</a></p>
     </div>
     <br>
     <table id="results" class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth mt-4"></table>
